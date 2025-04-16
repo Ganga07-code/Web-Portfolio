@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            overflow-x: hidden;
+            background-image: url("C:\\Users\\GANGADHAR MYLA\\Downloads\\nasa-Q1p7bh3SHj8-unsplash.jpg");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            color: white;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+            position: static;
+            z-index: 1000;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.7) !important;
+            border: none;
+        }
+
+        .navbar-nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding-left: 0;
+            margin: 0;
+        }
+
+        .navbar .nav-link {
+            text-decoration: none;
+            color: #007bff !important;
+            padding: 14px 20px;
+            margin: 0 15px;
+            font-size: 18px;
+            text-align: center;
+            border-radius: 4px;
+            border: 2px solid #000000;
+            transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+            background-color: transparent;
+            outline: none;
+        }
+
+        .navbar .nav-link:hover {
+            transform: translateY(-5px);
+            color: white !important;
+            background-color: #0056b3;
+            border-color: white; 
+            outline: 2px solid white;
+        }
+
+        .navbar .nav-item.active {
+            font-weight: bold;
+        }
+
+        footer {
+            color: white;
+            background-color: rgba(0, 0, 0, 0.7);
+            margin-top: 20px;
+        }
+
+        footer .social-icons a {
+            font-size: 22px;
+            margin: 0 10px;
+            color: white;
+        }
+
+        footer .social-icons a:hover {
+            color: #007bff;
+        }
+
+        .about-content {
+            background-color: rgba(13, 17, 35, 0); 
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .profile-image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .profile-image {
+            max-width: 180px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .bio-info {
+            line-height: 1.8;
+        }
+
+        .section-heading {
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 8px;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            color: #007bff;
+        }
+
+        ul li {
+            margin-bottom: 8px;
+        }
+
+        .marquee-container {
+            overflow: hidden;
+            width: 100%;
+            color: white;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                display: none;
+            }
+
+            .mobile-nav {
+                display: block;
+                width: 100%;
+                text-align: center;
+                position: static;
+                z-index: 1000;
+                background-color: rgba(0, 0, 0, 0.7);
+                padding: 10px 0;
+                /* Removed outline */
+                border: none;
+            }
+
+            .mobile-nav-toggle {
+                background-color: transparent;
+                color: #007bff;
+                border: 1px solid #007bff;
+                padding: 10px 15px;
+                margin: 10px auto;
+                border-radius: 4px;
+                font-size: 16px;
+                text-align: center;
+                width: 80%;
+                max-width: 300px;
+                cursor: pointer;
+            }
+
+            .mobile-nav-links {
+                display: none;
+                flex-direction: column;
+                width: 80%;
+                max-width: 300px;
+                margin: 0 auto;
+            }
+
+            .mobile-nav-links .nav-link {
+                text-decoration: none;
+                color: #007bff !important;
+                padding: 12px;
+                margin: 5px 0;
+                font-size: 16px;
+                text-align: center;
+                border-radius: 4px;
+                border: 1px solid #007bff;
+                display: block;
+                background-color: transparent;
+            }
+
+            .mobile-nav-links .nav-link:hover {
+                color: white !important;
+                background-color: #0056b3;
+                border-color: white; /* Added white border for mobile nav links on hover */
+                outline: 2px solid white; /* Added white outline for mobile nav links on hover */
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            h2 {
+                font-size: 1.3rem;
+            }
+
+            .profile-image {
+                max-width: 150px;
+            }
+            
+            .marquee-container {
+                margin-top: 20px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            footer .social-icons a {
+                font-size: 20px;
+                margin: 0 8px;
+            }
+
+            h1 {
+                font-size: 1.2rem;
+            }
+
+            h2 {
+                font-size: 1.1rem;
+            }
+
+            .container {
+                padding: 0 15px;
+            }
+
+            .about-content {
+                padding: 15px;
+            }
+
+            .profile-image {
+                max-width: 120px;
+            }
+
+            .bio-info {
+                font-size: 0.9rem;
+            }
+        }
+        
+        @media (min-width: 769px) {
+            .mobile-nav {
+                display: none;
+            }
+            
+            .container {
+                margin-top: 20px;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .navbar .nav-link {
+                margin: 0 15px;
+                padding: 14px 20px;
+                font-size: 18px;
+            }
+        }
+
+        @media (min-width: 1400px) {
+            .navbar .nav-link {
+                margin: 0 20px;
+                padding: 16px 24px;
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="text-center py-2">
+        <div class="marquee-container">
+            <h1 class="font-weight-bold">
+                <marquee>&#128511; You are viewing About Me Page &#128511;</marquee>
+            </h1>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="Portfolio.html">Portfolio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Home.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="About.html">About Me</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Images.html">Images</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Contact.html">Contact Us</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="mobile-nav">
+        <button class="mobile-nav-toggle" onclick="toggleMobileNav()">Menu</button>
+        <div class="mobile-nav-links" id="mobileNavLinks">
+            <a href="Portfolio.html" class="nav-link">Portfolio</a>
+            <a href="Home.html" class="nav-link">Home</a>
+            <a href="About.html" class="nav-link">About Me</a>
+            <a href="Images.html" class="nav-link">Images</a>
+            <a href="Contact.html" class="nav-link">Contact Us</a>
+        </div>
+    </div>
+
+    <div class="container my-4">
+        <div class="about-content">
+            <h1 class="font-weight-bold text-center mb-4">About Me</h1>
+            
+            <div class="row">
+                <div class="col-md-4 profile-image-container">
+                    <img src="C:\Users\GANGADHAR MYLA\OneDrive\Pictures\Camera Roll\WhatsApp Image 2025-01-23 at 19.40.29_e61b6b1f.jpg" class="profile-image" alt="Gangadhar's Profile Picture">
+                </div>
+                <div class="col-md-8 bio-info">
+                    <p><b>Name</b>: M.Gangadhar</p>
+                    <p><b>Father's Name</b>: M.Anka Rao</p>
+                    <p><b>Mother's Name</b>: M.Praveena</p>
+                    <p><b>Date Of Birth</b>: 13-01-2006</p>
+                    <p><b>Nativity</b>: Perukalapudi</p>
+                    <p><b>Age</b>: 19</p>
+                </div>
+            </div>
+            
+            <h2 class="font-weight-bold section-heading">Hobbies:</h2>
+            <ul>
+                <li><b>Cricket</b> - Playing and watching matches</li>
+                <li><b>Watching Movies</b> - Particularly interested in thrillers and documentaries</li>
+                <li><b>Farming</b> - Helping at the family farm and learning agricultural techniques</li>
+            </ul>
+            
+            <h2 class="font-weight-bold section-heading">Education:</h2>
+            <ul>
+                <li><b>Completed 10th Class</b> from Narayana English Medium School</li>
+                <li><b>Completed Intermediate Education</b> from Narayana Jr. College</li>
+                <li><b>Currently Studying B.Tech 2nd Year</b> in SRM-AP University</li>
+            </ul>
+            
+            <h2 class="font-weight-bold section-heading">Skills:</h2>
+            <ul>
+                <li><b>Programming</b> - Good at coding and problem-solving</li>
+                <li><b>Communication</b> - Effective verbal and written communication skills</li>
+                <li><b>Leadership</b> - Strong leadership qualities and team management</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer class="text-center py-3">
+        <p>&copy; 2025 Gangadhar. All rights reserved.</p>
+        <div class="social-icons">
+            <a href="https://www.instagram.com" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.linkedin.com" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.facebook.com" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function toggleMobileNav() {
+            const navLinks = document.getElementById('mobileNavLinks');
+            navLinks.style.display = (navLinks.style.display === 'block') ? 'none' : 'block';
+        }
+    </script>
+</body>
+</html>
